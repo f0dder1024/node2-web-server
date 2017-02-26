@@ -21,10 +21,11 @@ app.use((req, res, next)=>{
     next();
 });
 
-app.use((req, res, next)=>{
-    res.render('maintenance.hbs');
-   //next();
-});
+// Enable to turn on maintenance
+// app.use((req, res, next)=>{
+//     //res.render('maintenance.hbs');
+//    next();
+// });
 
 hbs.registerHelper('getCurrentYear', ()=>{
     return new Date().getFullYear()
